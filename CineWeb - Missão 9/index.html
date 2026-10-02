@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="inicio">
+        <h1 class="comboInicio">Monte o seu combo!🍿</h1>
+        <p class="paragrafo1">Monte o que quiser para a melhor experiência</p>
+    </header>
+
+    <h2 class="cardapio">Cardápio disponível🍿</h2>
+
+    <main>
+
+        <section>
+
+       <div class="chocolate">
+                <img src="Chocolates no cinema de luz quente.png" alt="">
+
+                <h3>🍫 Chocolate</h3>
+                <p>R$ 9</p>
+
+                <button class="botao" onclick="adicionarProduto('Chocolate', 7)">
+                    Adicionar
+                </button>
+            </div>
+         
+            <br>
+            
+            <div class="pipoca">
+            <img src="Pipoca Cinematográfica no Teatro.png" alt="">
+                <h3>🍿pipoca</h3>
+                <p>preco :R$ 14</p>
+                
+                <button class="botao" onclick="adicionarProduto('Chocolate', 7)">
+                    Adicionar
+                </button>
+            </div>
+             
+            <br>
+
+            <div class="doce">
+                <img src="doce.png" alt="">
+
+                <h3>🍬 doce</h3>
+                <p>R$6</p>
+
+                <button class="botao" onclick="adicionarProduto('Chocolate', 7)">
+                    Adicionar
+                </button>
+            </div>
+
+            <br>
+
+             <div class="cachorroquente">
+                <img src="cachorro quente.png" alt="">
+
+                <h3> 🌭cachorro-quente</h3>
+                <p>R$15</p>
+
+                <button class="botao" onclick="adicionarProduto('Chocolate', 7)">
+                    Adicionar
+                </button>
+            </div>
+            
+            <br>
+            
+            <div class="refrigerante">
+                <img src="refrigerante.png" alt="">
+
+                <h3> 🥤refrigerante</h3>
+                <p>R$10</p>
+
+                <button class="botao" onclick="adicionarProduto('Chocolate', 7)">
+                    Adicionar
+                </button>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="comboFinal">
+            <h2 class="combo">Finalize o seu combo!</h2>
+
+            <div id="listaCombo">
+                <p>Não há nenhum produto aqui.</p>
+                
+                <h2>
+                    Total: R$ <span id="total">0,00</span>
+                </h2>
+
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
