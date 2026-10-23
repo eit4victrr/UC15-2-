@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Profissional | Estágio Tech</title>
+     <link rel="icon" type="image/png" href="Logotipo Monograma VB de Luxo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="Monograma VB Victor Bruno.png" alt="Logotipo Victor Bruno" class="logo-img">
+        </a>
+        <button class="btn-menu" aria-label="Abrir Menu de Navegação" aria-expanded="false">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre Me</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo de cor">🌓</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+                <section id="inicio" class="section-hero">
+            <div class="hero-content">
+                <span id="saudacao" class="dynamic-greeting">Olá!</span>
+                <h1>Eu sou <span class="highlight">
+                        Bruno</span></h1>
+                <p>Desenvolvedor Web em busca de uma oportunidade de estágio.</p>
+                <a href="#projetos" class="btn-primary">Ver Meus Projetos</a>
+            </div>
+            <div class="hero-image">
+                <img src="WhatsApp Image 2026-10-21 at 01.12.48.jpeg" alt="Foto de perfil de Seu Nome sorrindo"
+                    class="avatar">
+            </div>
+        </section>
+
+    
+        <section id="sobre" class="section-about">
+            <h2>Sobre Mim</h2>
+            <div class="about-container">
+                <p>Sou um estudante de Informática. Motivado pelo sonho de ser um Desenvolvedor Web, 
+                    desde pequeno dominado pela vontade de me tornar um.</p>
+                <p><strong>Objetivo Profissional:</strong> Atuar como Estagiário(a) em Desenvolvimento Web, aplicando
+                    meus conhecimentos práticos e colaborando com o crescimento da equipe de tecnologia.</p>
+            </div>
+        </section>
+
+    
+        <section id="habilidades" class="section-skills">
+            <h2>Estou aprendendo</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>HTML</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>CSS</h3>
+                    
+                </div>
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                   
+                </div>
+            
+            </div>
+        </section>
+
+      
+        <section id="projetos" class="section-projects">
+            <h2>Projetos Desenvolvidos</h2>
+            <div class="projects-grid">
+                <!-- Projeto 1 -->
+                <article class="project-card">
+                    <h3>Projeto 1: Cine-Web</h3>
+                    <p>Site para um cinema.</p>
+                    <p><strong>Tecnologias:</strong> HTML, CSS e Java Script</p>
+                    <a href="#" target="_blank" class="project-link">Visualizar Projeto</a>
+                </article>
+                <!-- Projeto 2 -->
+                <article class="project-card">
+                    <h3>Projeto 2: Barbearia Premium</h3>
+                    <p>Site de uma barbearia premium.</p>
+                    <p><strong>Tecnologias:</strong> HTML, CSS</p>
+                    <a href="#" target="_blank" class="project-link">Visualizar Projeto</a>
+                </article>
+                <!-- Projeto 3 -->
+                <article class="project-card">
+                    <h3>Projeto 3: Clínica</h3>
+                    <p>Site de Clínica, marcar consultas, exames e etc.</p>
+                    <p><strong>Tecnologias:</strong> HTML e CSS</p>
+                    <a href="#" target="_blank" class="project-link">Visualizar Projeto</a>
+                </article>
+            </div>
+        </section>
+
+      
+        <section id="contato" class="section-contact">
+            <h2>Entre em Contato</h2>
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" required minlength="3">
+                    <span class="error-message" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" required minlength="10"></textarea>
+                    <span class="error-message" id="message-error"></span>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="consent" required>
+                    <label for="consent">Sei que meus dados serão usados apenas para este contato.</label>
+                    <span class="error-message" id="consent-error"></span>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+   
+    <footer class="footer">
+        <p>&copy; <span id="current-year"></span> Victor Bruno. Todos os direitos reservados.</p>
+        <a href="#inicio" class="back-to-top" aria-label="Voltar para o topo do site">▲ Voltar ao topo</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
