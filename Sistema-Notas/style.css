@@ -1,0 +1,239 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo: #0b0b0d;
+    --cartao: #151518;
+    --vermelho: #e50914;
+    --vermelho-hover: #b80710;
+    --texto: #f5f5f5;
+    --borda: #333338;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background:
+        radial-gradient(circle at top left, #3b0a0e 0, transparent 38%),
+        var(--fundo);
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    padding: 30px;
+}
+
+h1 {
+    max-width: 500px;
+    font-size: 42px;
+    line-height: 1.2;
+    text-align: center;
+    color: #ffffff;
+}
+
+h1::first-letter {
+    color: var(--vermelho);
+}
+
+#form-notas {
+    width: 100%;
+    max-width: 465px;
+    padding: 32px;
+    background: var(--cartao);
+    border: 1px solid #39393f;
+    border-top: 3px solid var(--vermelho);
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.45);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    color: #f0f0f0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    height: 48px;
+    padding: 12px 15px;
+    font-size: 16px;
+    color: #ffffff;
+    background: #0e0e10;
+    border: 1px solid #39393f;
+    border-radius: 9px;
+    outline: none;
+    transition: 0.25s;
+}
+
+.input-group input::placeholder {
+    color: #777780;
+}
+
+.input-group input:focus {
+    border-color: var(--vermelho);
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.15);
+}
+
+input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.notas-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.notas-container .input-group {
+    min-width: 0;
+}
+
+.notas-container .input-group input {
+    padding: 10px;
+}
+
+.botoes-container {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.botoes-container button {
+    flex: 1;
+    min-width: 0;
+    min-height: 46px;
+    padding: 12px 10px;
+    border: none;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+#btn-calcular {
+    color: #ffffff;
+    background: var(--vermelho);
+    box-shadow: 0 5px 15px rgba(229, 9, 20, 0.2);
+}
+
+#btn-calcular:hover {
+    background: var(--vermelho-hover);
+    box-shadow: 0 7px 20px rgba(229, 9, 20, 0.3);
+    transform: translateY(-2px);
+}
+
+#btn-limpar {
+    color: #f0f0f0;
+    background: #303035;
+    border: 1px solid #45454b;
+}
+
+#btn-limpar:hover {
+    color: #ffffff;
+    background: #414147;
+    transform: translateY(-2px);
+}
+
+.botoes-container button:active {
+    transform: translateY(0);
+}
+
+.botoes-container button:focus-visible {
+    outline: 3px solid #ff7278;
+    outline-offset: 3px;
+}
+
+#resultado {
+    width: 100%;
+    max-width: 465px;
+    margin-top: 20px;
+    padding: 22px;
+    color: #ffffff;
+    background: var(--cartao);
+    border: 1px solid #39393f;
+    border-left: 3px solid var(--vermelho);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.resultado-oculto {
+    display: none;
+}
+
+#resultado h2 {
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+#resultado p {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+#resultado strong {
+    color: #ff424b;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 25px 16px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    #form-notas,
+    #resultado {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 520px) {
+    h1 {
+        font-size: 27px;
+    }
+
+    #form-notas {
+        padding: 22px 18px;
+    }
+
+    .notas-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .botoes-container {
+        flex-direction: column;
+    }
+
+    .botoes-container button {
+        width: 100%;
+    }
+}
